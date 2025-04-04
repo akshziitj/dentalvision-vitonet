@@ -1,0 +1,2 @@
+[global]
+watcherBlacklist = ["torch", "torch.*"]
