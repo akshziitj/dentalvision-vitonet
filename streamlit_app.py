@@ -6,8 +6,8 @@ import numpy as np
 import torchvision.transforms as T
 from utils import load_model, predict_mask
 
-# Prevent Streamlit from trying to introspect problematic torch modules
-os.environ["STREAMLIT_WATCHER_BLACKLIST"] = "torch,torch.*"
+os.environ["STREAMLIT_DISABLE_WATCHDOG_WARNINGS"] = "true"
+os.environ["STREAMLIT_WATCHED_MODULES"] = ""
 
 # Streamlit app configuration
 st.set_page_config(page_title="DentalVision - Teeth Segmentation", layout="centered")
