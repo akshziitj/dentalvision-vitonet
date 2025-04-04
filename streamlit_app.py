@@ -1,6 +1,6 @@
 import os
 
-# ✅ Disable all source file watching (must be done before importing streamlit)
+# Disable all source file watching (must be done before importing streamlit)
 os.environ["STREAMLIT_WATCH_DISABLE"] = "true"
 
 import streamlit as st
