@@ -1,13 +1,15 @@
 import os
+
+# ✅ Set environment variables BEFORE importing Streamlit or Torch
+os.environ["STREAMLIT_DISABLE_WATCHDOG_WARNINGS"] = "true"
+os.environ["STREAMLIT_WATCHED_MODULES"] = ""
+
 import streamlit as st
 import torch
 from PIL import Image
 import numpy as np
 import torchvision.transforms as T
 from utils import load_model, predict_mask
-
-os.environ["STREAMLIT_DISABLE_WATCHDOG_WARNINGS"] = "true"
-os.environ["STREAMLIT_WATCHED_MODULES"] = ""
 
 # Streamlit app configuration
 st.set_page_config(page_title="DentalVision - Teeth Segmentation", layout="centered")
