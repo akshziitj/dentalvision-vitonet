@@ -1,6 +1,5 @@
 import os
 
-# MUST come before any streamlit imports
 os.environ["STREAMLIT_WATCH_DISABLE"] = "true"
 
 import streamlit as st
