@@ -1,7 +1,12 @@
 import os
 
+# Disable file watching completely — critical for avoiding torch.classes error
 os.environ["STREAMLIT_WATCH_DISABLE"] = "true"
 
+# Optional: avoids unnecessary log warnings
+os.environ["STREAMLIT_DISABLE_WATCHDOG_WARNINGS"] = "true"
+
+# import Streamlit and others
 import streamlit as st
 import torch
 from PIL import Image
